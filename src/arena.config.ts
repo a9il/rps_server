@@ -1,5 +1,6 @@
 import Arena from "@colyseus/arena";
 import { monitor } from "@colyseus/monitor";
+import { LeaderboardRoom } from "./rooms/LeaderboardRoom";
 
 /**
  * Import your Room files
@@ -13,6 +14,7 @@ export default Arena({
         /**
          * Define your room handlers:
          */
+        gameServer.define('l_room', LeaderboardRoom);
         gameServer.define('my_room', MyRoom);
 
     },
